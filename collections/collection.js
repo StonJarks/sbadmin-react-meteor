@@ -1,22 +1,26 @@
-Collection = new Meteor.Collection( 'collection' );
+Dashboard = new Meteor.Collection( 'People' );
+// #person
+//  #avatar - img
+//  #name - string
+//  #email - string
 
-Collection.allow({
+Dashboard.allow({
   insert: () => false,
   update: () => false,
   remove: () => false
 });
 
-Collection.deny({
+Dashboard.deny({
   insert: () => true,
   update: () => true,
   remove: () => true
 });
 
-let CollectionSchema = new SimpleSchema({
+let DashboardSchema = new SimpleSchema({
   "owner": {
     type: String,
     label: "The ID of the owner of this document."
   }
 });
 
-Collection.attachSchema( CollectionSchema );
+Dashboard.attachSchema( DashboardSchema );

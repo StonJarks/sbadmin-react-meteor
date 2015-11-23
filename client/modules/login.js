@@ -31,8 +31,8 @@ let validation = ( template ) => {
 };
 
 let _handleLogin = ( template ) => {
-  let email    = template.find( '[name="emailAddress"]' ).value,
-      password = template.find( '[name="password"]' ).value;
+  let email    = $( '[name="emailAddress"]' ).val(),
+      password = $( '[name="password"]' ).val();
 
   Meteor.loginWithPassword( email, password, ( error ) => {
     if ( error ) {
