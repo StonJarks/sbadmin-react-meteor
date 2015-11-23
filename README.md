@@ -10,6 +10,7 @@ A starting point for Meteor apps.
     <tr>
       <th>Meteor Version</th>
       <td>v1.2.1</td>
+      <td>Uses React.js instead of blaze as View</td>
     </tr>
   </tbody>
 </table>
