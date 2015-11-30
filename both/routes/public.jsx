@@ -9,30 +9,37 @@ const publicRoutes = FlowRouter.group({
   triggersEnter: [ publicRedirect ]
 });
 
+publicRoutes.route( '/', {
+  name: 'index',
+  action() {
+    ReactLayout.render( PublicDefault, { yield: <PublicBody />  } );
+  }
+});
+
 publicRoutes.route( '/signup', {
   name: 'signup',
   action() {
-    ReactLayout.render( Default, { yield: <Signup /> } );
+    ReactLayout.render( PublicDefault, { yield: <Signup /> } );
   }
 });
 
 publicRoutes.route( '/login', {
   name: 'login',
   action() {
-    ReactLayout.render( Default, { yield: <Login /> } );
+    ReactLayout.render( PublicDefault, { yield: <Login /> } );
   }
 });
 
 publicRoutes.route( '/recover-password', {
   name: 'recover-password',
   action() {
-    ReactLayout.render( Default, { yield: <RecoverPassword /> } );
+    ReactLayout.render( PublicDefault, { yield: <RecoverPassword /> } );
   }
 });
 
 publicRoutes.route( '/reset-password/:token', {
   name: 'reset-password',
   action() {
-    ReactLayout.render( Default, { yield: <ResetPassword /> } );
+    ReactLayout.render( PublicDefault, { yield: <ResetPassword /> } );
   }
 });
